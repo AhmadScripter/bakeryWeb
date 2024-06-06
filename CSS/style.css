@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Metrophobic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/headerImg.png) no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: 1;
+    opacity: 0.9;
+    transition: height 0.3s ease-in-out;
+}
+
+header .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding: 0 30px;
+}
+
+.navbar h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav .navbar-nav a {
+    margin: 0px 40px;
+    font-family: "Alegreya", serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+nav .navbar-nav a::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    align-items: center;
+    background: #ffffff;
+    transition: all 0.5s;
+}
+
+.navbar-nav a:hover,
+.heading:hover {
+    color: #ffffff !important;
+}
+
+nav .navbar-nav a:hover::before {
+    width: 100%;
+}
+
+.navbar .social-icons a {
+    padding: 10px;
+}
+
+.navbar .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.navbar.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background-color: #fff !important;
+    box-shadow: 0 4px 2px -2px gray !important;
+}
+
+
+.header-text {
+    color: #ffffff;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-text .row {
+    max-width: 600px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.header-text>* {
+    margin: 10px 0;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-family: "Playfair Display", serif;
+}
+
+.header-text p {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: "Metrophobic", sans-serif;
+}
+
+.header-text button {
+    font-family: "Alegreya", serif;
+    width: 170px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 10px 35px;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header-text button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+header .center-icon {
+    position: absolute;
+    bottom: -50px;
+    z-index: 3;
+}
+
+/* -----------------header section end --------------- */
+.chef-section {
+    padding: 75px 0px;
+}
+
+.chef-section .col-md-6 {
+    text-align: center;
+}
+
+.chef-section .container>.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chef-section h1 {
+    font-family: "Algeraya", serif;
+    font-weight: 700;
+    color: #56534c;
+}
+
+.chef-section h6 {
+    font-family: "Algeraya", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a47d5e;
+}
+
+.chef-section p {
+    margin-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 7px 50px;
+}
+
+.chef-section h5 {
+    color: #56534c;
+    font-family: "Algeraya", serif;
+    font-weight: 600;
+}
+
+.chef-section .avtar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.chef-section .avtar h4 {
+    font-family: "Algeraya", serif;
+}
+
+.chef-section .unique h2 {
+    font-family: "Dancing Script", cursive;
+    color: #b6977e;
+}
+
+.chef-section .right-content img {
+    width: 80%;
+}
+
+/* -----------pencake section start --------- */
+.pencake-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pencake-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/pencakesBG.png) no-repeat center center/cover;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.pencake-section .container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pencake-section .row {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+.pencake-section .col-md-4,
+.pencake-section .col-md-8 {
+    padding: 0;
+}
+
+.pencake-section .pencakeHeroImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pencake-section .pencakeHeroImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.pencake-section .pencake-desc {
+    background: #ffffff;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.pencake-section .pencake-desc h1 {
+    color: #56534c;
+    font-family: "Algeraya", serif;
+    font-weight: 700;
+}
+
+.pencake-section .pencake-desc h6 {
+    text-transform: uppercase;
+    font-family: "Algeraya", serif;
+    font-weight: 600;
+    color: #a47d5e;
+}
+
+.pencake-section .pencake-desc p {
+    font-family: "Montserrat", sans-serif;
+    color: #56534c;
+    margin: 40px 0;
+}
+
+.pencake-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pencake-col {
+    flex: 1;
+    text-align: center;
+}
+
+.pencake-col img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pencake-row i {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.pencake-section .pencake-right-box {
+    z-index: 6;
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 150px !important;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Algeraya", serif;
+}
+
+.pencake-section .pencake-right-box h5,
+.pencake-right-box h6 {
+    font-weight: 600;
+    color: #aa8669;
+}
+
+.pencake-right-box h1 {
+    color: #dfc691;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* --------breakfast section start --------- */
+.breakfast-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.breakfast-section::before {
+    content: '';
+    position: absolute;
+    background: url(../imgs/breakfastImg.png) no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+.breakfast-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.breakfast-section::before {
+    content: '';
+    position: absolute;
+    background: url(../imgs/breakfastImg.png) no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+.breakfast-section .main {
+    color: #ffffff;
+    position: relative;
+    z-index: 7;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.breakfast-section .col-md-6.txt {
+    text-align: center;
+}
+
+.breakfast-section>*:not(p) {
+    font-family: "Alegreya", serif;
+
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.breakfast-section .txt h6 {
+    color: #bc9d8f;
+}
+
+.breakfast-section .txt h4 {
+    color: #dfc691;
+}
+
+.breakfast-section .txt p {
+    color: #c2beba;
+    font-size: 14px;
+    font-family: "Metrophobic", sans-serif;
+}
+
+.breakfast-section .txt div:nth-child(2) {
+    margin: 40px 0;
+}
+
+.breakfast-section .txt div:nth-child(4) {
+    margin: 10px 0;
+}
+
+.breakfast-section .col-md-6.right-content {
+    display: flex;
+    justify-content: right;
+}
+
+.breakfast-section .right-content .col-12 {
+    padding: 50px 25px;
+    background-color: #f3f1e9;
+    color: #56534c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.breakfast-section .right-content .col-12 .est {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.breakfast-section .right-content img {
+    width: 100%;
+}
+
+.breakfast-section .right-content button {
+    font-weight: 600;
+    color: #a47d5e;
+    border: 1px solid #a47d5e;
+    padding: 10px 50px;
+    transition: background 0.5s ease-in-out;
+}
+
+.breakfast-section .right-content button:hover {
+    background: #a47d5e;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* sandwitch section start -------- */
+
+.sandwitch-section {
+    position: relative;
+    width: 100%;
+    background: #f3f1e9;
+}
+
+.sandwitch-section :not(p) {
+    font-family: "Alegreya", serif;
+}
+
+.sandwitch-section .upper-row {
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.sandwitch-section .upper-row img {
+    width: 45%;
+}
+
+.sandwitch-section .upper-row h1 {
+    color: #56534c;
+    font-weight: 700;
+    margin-top: -20px;
+}
+
+.sandwitch-section .upper-row h6 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #c4ab96;
+}
+
+.sandwitch-section .lower-row .card {
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    border: none;
+    background: none;
+}
+
+.sandwitch-section .lower-row .card img {
+    width: 30%;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.1));
+}
+
+.sandwitch-section .lower-row .card h4 {
+    color: #a47d5e;
+}
+
+.sandwitch-section .lower-row .card p {
+    font-family: "Montserrat", sans-serif;
+    color: #56534c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sandwitch-section .col-md-9 {
+    background: url(../imgs/footerRightContent.png) no-repeat center;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.1));
+    position: relative;
+}
+
+.sandwitch-section .col-md-9 .col-md-3 {
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+
+.sandwitch-section .col-md-3 .little-card {
+    background: rgba(255, 255, 255, 0.8);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1px 0 0 0;
+}
+
+.sandwitch-section .col-md-3 .little-card.last {
+    margin: 0;
+    background: rgba(255, 255, 255, 1);
+}
+
+.sandwitch-section .little-card h5 {
+    color: #a47d5e;
+}
+
+.sandwitch-section .little-card h6 {
+    color: #979285;
+}
+
+.sandwitch-section .little-card h1 {
+    color: #56534c;
+}
+
+.sandwitch-section .little-card.last h1 {
+    color: #dfc691;
+}
+
+.sandwitch-section .col-md-9 .recipe-box {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    background: #ffffff;
+    width: 180px;
+    padding: 12px 0;
+    text-align: center;
+    border: 1px dashed #dfc691;
+    color: #dfc691;
+}
+
+
+/* ----------footer :start------------ */
+footer {
+    background: #f3f1e9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+footer div {
+    background: #eeece1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: "Alegreya", serif;
+}
+
+footer div a {
+    color: #3b3a35;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 40px;
+}
+
+footer h1 {
+    color: #6b6861;
+    font-family: "Dancing Script", cursive;
+}
+
+@media only screen and (max-width: 1200px) {
+    nav .navbar-nav a {
+        margin: 0px 15px;
+    }
+
+    .breakfast-section .right-content h1 {
+        font-size: 30px;
+    }
+
+    .breakfast-section .right-content p {
+        font-size: 14px;
+    }
+
+    footer div a {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer div a {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .pencake-section .row {
+        max-width: 500px;
+        margin: 15px;
+    }
+
+    .pencake-right-box {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sandwitch-section .recipe-box {
+        display: none;
+    }
+
+    .sandwitch-section .col-md-9 .col-md-3 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    footer div a {
+        padding: 5px;
+        font-size: 10px;
+    }
+}
